@@ -5,6 +5,10 @@ This remote MCP server publishes a `tool` for searching and querying the documen
 
 Created with love, to make it easier for developers building on the protocol. 
 
+<a href="https://glama.ai/mcp/servers/@immber/mcp-atproto-docs">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@immber/mcp-atproto-docs/badge" alt="ATproto Docs Server MCP server" />
+</a>
+
 ## Based on: 
 
 Originally based on the [remote MCP authless server template](https://github.com/cloudflare/ai/tree/main/demos/remote-mcp-authless) CloudFlare provides. 
