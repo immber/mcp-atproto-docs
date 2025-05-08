@@ -13,7 +13,7 @@
 	"migrations": [
 		{
 			"new_sqlite_classes": [
-				"MyMCP"
+				"atprotoDocsMCP"
 			],
 			"tag": "v1"
 		}
@@ -21,10 +21,13 @@
 	"durable_objects": {
 		"bindings": [
 			{
-				"class_name": "MyMCP",
+				"class_name": "atprotoDocsMCP",
 				"name": "MCP_OBJECT"
 			}
 		]
+	},
+	"ai": {
+		"binding": "AI"
 	},
 	"observability": {
 		"enabled": true
