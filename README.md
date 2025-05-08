@@ -10,8 +10,9 @@ Created with love, to make it easier for developers building on the protocol.
 Originally based on the [remote MCP authless server template](https://github.com/cloudflare/ai/tree/main/demos/remote-mcp-authless) CloudFlare provides. 
 
 This remote MCP server is publicly available at: 
-
- `mcp-atproto-docs.immber.workers.dev/sse`
+```
+https://mcp-atproto-docs.immber.workers.dev/sse
+```
 
 It queries a CloudFlare AutoRAG instance that is fed with ATprocol's public documentation. 
 
@@ -21,7 +22,7 @@ It queries a CloudFlare AutoRAG instance that is fed with ATprocol's public docu
 You can connect to this MCP server from the Cloudflare AI Playground, which is a remote MCP client:
 
 1. Go to https://playground.ai.cloudflare.com/
-2. Enter your deployed MCP server URL ( `mcp-atproto-docs.immber.workers.dev/sse`)
+2. Enter your deployed MCP server URL ( `https://mcp-atproto-docs.immber.workers.dev/sse`)
 3. You can now use this MCP tool directly from the playground!
 
 ## Connect Claude Desktop to your MCP server
@@ -37,7 +38,7 @@ Update with this configuration:
       "command": "npx",
       "args": [
         "mcp-remote",
-        "mcp-atproto-docs.immber.workers.dev/sse" 
+        "https://mcp-atproto-docs.immber.workers.dev/sse"
       ]
     }
   }
