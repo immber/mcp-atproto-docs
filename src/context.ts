@@ -1,10 +1,10 @@
-import type { MyMCP } from './index'
+import type { atprotoDocsMCP } from './index'
 
 export interface Env {
 	ENVIRONMENT: 'development' | 'staging' | 'production'
 	MCP_SERVER_NAME: string
 	MCP_SERVER_VERSION: string
-	MCP_OBJECT: DurableObjectNamespace<MyMCP>
+	MCP_OBJECT: DurableObjectNamespace<atprotoDocsMCP>
 	MCP_METRICS: AnalyticsEngineDataset
 	AI: Ai
 	VECTORIZE: VectorizeIndex
