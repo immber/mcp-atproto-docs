@@ -1,4 +1,8 @@
 # A Remote MCP Server for ATproto Docs 
+<a href="https://glama.ai/mcp/servers/@immber/mcp-atproto-docs">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@immber/mcp-atproto-docs/badge" alt="ATproto Docs Server MCP server" />
+</a>
+
 ## Deployed to Cloudflare 
 
 
@@ -63,6 +67,7 @@ Update with this configuration:
   }
 }
 ```
+
 
 Restart Claude and you should see the tools become available. 
 
