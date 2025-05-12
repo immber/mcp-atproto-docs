@@ -67,3 +67,4 @@ Update with this configuration:
 Restart Claude and you should see the tools become available. 
 
 ### Sample Queries
+![screenshot from claude desktop showing the results of a query about oauth](https://github.com/immber/mcp-atproto-docs/blob/b602d5b7a3c9609a2ff23e9c4572c34d30b50d99/Screenshot-oauth.png)
