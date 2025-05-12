@@ -1,27 +1,46 @@
 # A Remote MCP Server for ATproto Docs 
-## Deployed to Cloudflare (Without Auth)
-
-This remote MCP server publishes a `tool` for searching and querying the documentation for ATprotocol.
-
-Created with love, to make it easier for developers building on the protocol. 
-
 <a href="https://glama.ai/mcp/servers/@immber/mcp-atproto-docs">
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@immber/mcp-atproto-docs/badge" alt="ATproto Docs Server MCP server" />
 </a>
 
-## Based on: 
+## Deployed to Cloudflare 
 
-Originally based on the [remote MCP authless server template](https://github.com/cloudflare/ai/tree/main/demos/remote-mcp-authless) CloudFlare provides. 
+
+This remote MCP server publishes a `tool` for searching and querying the documentation for ATprotocol.
+
+| Tool                   | Description             |
+|------------------------|-------------------------|
+| `search_documentation` | Searches the atproto docs |
+
+
+Created with love 💙, to make life easier for developers building on the protocol. 
 
 This remote MCP server is publicly available at: 
 ```
 https://mcp-atproto-docs.immber.workers.dev/sse
 ```
 
-It queries a CloudFlare AutoRAG instance that is fed with ATprocol's public documentation. 
+## Depends on
+
+Created using the [remote MCP authless server template](https://github.com/cloudflare/ai/tree/main/demos/remote-mcp-authless) CloudFlare provides. 
+
+This MCP server queries a CloudFlare AutoRAG instance that is fed by a Cloudflare worker with ATprocol's public documentation. 
+* cron worker `=>`  R2 storage bucket `=>`  AutoRAG  Vectorize DB
+  
+
+This project was originally inspired by [Cloudflare's Documentation MCP Server](https://github.com/cloudflare/mcp-server-cloudflare/tree/main/apps/docs-vectorize). 
 
 
-## Connect to Cloudflare AI Playground
+## Sources
+
+[atproto-docs-worker](https://github.com/immber/atproto-docs-worker) is a cloudflare worker that crawls and saves documentation to an R2 bucket. It runs on a weekly cron schedule. 
+
+To view or request changes to the list of resources currently being included, please visit that repo.  
+
+## Using the tool
+Connect with any MCP compatible client. Then ask your AI agent of choice to use the `search_documentation` tool. 
+
+### Connect to Cloudflare AI Playground
 
 You can connect to this MCP server from the Cloudflare AI Playground, which is a remote MCP client:
 
@@ -29,9 +48,9 @@ You can connect to this MCP server from the Cloudflare AI Playground, which is a
 2. Enter your deployed MCP server URL ( `https://mcp-atproto-docs.immber.workers.dev/sse`)
 3. You can now use this MCP tool directly from the playground!
 
-## Connect Claude Desktop to your MCP server
+### Connect Claude Desktop to your MCP server
 
-To connect to your MCP server from Claude Desktop, follow [Anthropic's Quickstart](https://modelcontextprotocol.io/quickstart/user) and within Claude Desktop go to Settings > Developer > Edit Config.
+To connect to this MCP server from Claude Desktop, follow [Anthropic's Quickstart](https://modelcontextprotocol.io/quickstart/user) and within Claude Desktop go to Settings > Developer > Edit Config.
 
 Update with this configuration:
 
@@ -49,4 +68,8 @@ Update with this configuration:
 }
 ```
 
+
 Restart Claude and you should see the tools become available. 
+
+### Sample Queries
+![screenshot from claude desktop showing the results of a query about oauth](https://github.com/immber/mcp-atproto-docs/blob/b602d5b7a3c9609a2ff23e9c4572c34d30b50d99/Screenshot-oauth.png)
