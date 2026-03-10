@@ -16,7 +16,7 @@ export function registerDocsTools(agent: atprotoDocsMCP) {
         This tool can be used to answer questions about documentation. Results are limited and returned as semantically similar chunks to the query.`,
         { query: z.string() },
         async ({ query }) => {
-			const results = await agent.env.AI.autorag("atproto-docs-rag").aiSearch({
+			const results = await agent.env.AI.autorag("search-atproto-docs-rag").aiSearch({
 				query: query,
 			})
             return {
