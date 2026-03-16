@@ -2,6 +2,8 @@
 <a href="https://glama.ai/mcp/servers/@immber/mcp-atproto-docs">
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@immber/mcp-atproto-docs/badge" alt="ATproto Docs Server MCP server" />
 </a>
+<a href="https://smithery.ai/server/@immber/mcp-atproto-docs"><img alt="Smithery Badge" src="https://smithery.ai/badge/@immber/mcp-atproto-docs"></a>
+
 
 ## Deployed to Cloudflare 
 

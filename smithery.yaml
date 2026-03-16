@@ -1,0 +1,32 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - url
+    properties:
+      url:
+        type: string
+        description: The HTTP SSE endpoint of the remote MCP server
+      host:
+        type: string
+        default: 0.0.0.0
+        description: Host binding for local proxy, optional
+      port:
+        type: number
+        default: 0
+        description: Local port for the TCP proxy, optional
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => {
+      const args = ['mcp-remote', config.url];
+      return { command: 'npx', args, env: {} };
+    }
+  exampleConfig:
+    url: https://mcp-atproto-docs.immber.workers.dev/sse
+    host: 0.0.0.0
+    port: 0
