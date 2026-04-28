@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/immber-mcp-atproto-docs-badge.png)](https://mseep.ai/app/immber-mcp-atproto-docs)
+
 # A Remote MCP Server for ATproto Docs 
 <a href="https://glama.ai/mcp/servers/@immber/mcp-atproto-docs">
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@immber/mcp-atproto-docs/badge" alt="ATproto Docs Server MCP server" />
